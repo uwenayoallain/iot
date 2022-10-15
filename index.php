@@ -56,6 +56,9 @@
   <div class="container">
     <div>
       <div>
+        <h1>
+    HUMAN TEMPERATURE ANALYTICS
+  </h1>
   <h1>
     Name: <span>UWENAYO Alain Pacifique Y3 A</span>
   </h1>
