@@ -6,41 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <?php
-    include "temp_data.php";
+    include "data.php";
     ?>
     <script>
         window.onload = function () {
  
  var chart = new CanvasJS.Chart("chartContainer", {
      title: {
-         text: "Device Temperature Statistics"
+         text: "Human Temperature Analytics"
      },
      axisY: {
-         title: "temperature"
+         title: "Temperature"
      },
      data: [{
         showInLegend: true, 
-        name: "series1",
-        legendText: "device-01",
+        name: "001",
+        legendText: "Device_1",
          type: "line",
          dataPoints: <?php echo json_encode($dataPoints1, JSON_NUMERIC_CHECK); ?>
         },{
             showInLegend: true, 
-        name: "series2",
-        legendText: "device-02",
+        name: "002",
+        legendText: "Device_2",
          type: "line",
          dataPoints: <?php echo json_encode($dataPoints2, JSON_NUMERIC_CHECK); ?>
         },{
             showInLegend: true, 
-        name: "series3",
-        legendText: "device-03",
+        name: "003",
+        legendText: "Device_3",
          type: "line",
          dataPoints: <?php echo json_encode($dataPoints3, JSON_NUMERIC_CHECK); ?>
         },
         {
          showInLegend: true, 
-        name: "series4",
-        legendText: "device-04",
+        name: "004",
+        legendText: "Device_4",
          type: "line",
          dataPoints: <?php echo json_encode($dataPoints4, JSON_NUMERIC_CHECK); ?>
         }
