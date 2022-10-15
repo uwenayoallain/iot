@@ -1,9 +1,9 @@
 <?php
  
-$dataPoints1 = array();
-$dataPoints2 = array();
-$dataPoints3 = array();
-$dataPoints4 = array();
+$_001 = array();
+$_002 = array();
+$_003 = array();
+$_004 = array();
 try{
      $dsn = "mysql:host={$_ENV["HOST"]};dbname={$_ENV["DATABASE"]}";
   $options = array(
@@ -24,16 +24,16 @@ try{
     $handle4->execute(); 
     $result4 = $handle4->fetchAll(\PDO::FETCH_OBJ);
     foreach($result1 as $row){
-        array_push($dataPoints1, array("label"=> $row->added, "y"=> $row->temperature));
+        array_push($_001, array("label"=> $row->added, "y"=> $row->temperature));
     }
     foreach($result2 as $row){
-        array_push($dataPoints2, array("label"=> $row->added, "y"=> $row->temperature));
+        array_push($_002, array("label"=> $row->added, "y"=> $row->temperature));
     }
     foreach($result3 as $row){
-        array_push($dataPoints3, array("label"=> $row->added, "y"=> $row->temperature));
+        array_push($_003, array("label"=> $row->added, "y"=> $row->temperature));
     }
     foreach($result4 as $row){
-        array_push($dataPoints4, array("label"=> $row->added, "y"=> $row->temperature));
+        array_push($_004, array("label"=> $row->added, "y"=> $row->temperature));
     }
 	$link = null;
 }
